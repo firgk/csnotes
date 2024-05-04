@@ -1,35 +1,6 @@
-## 快速初始化
-start.spring.io
-快速生成springboot项目
-start.aliyun.com
-国内
-
-## maven创建
-```xml
-<parent>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <groupId>org.springframework.boot</groupId>
-    <version>2.7.14</version>
-</parent>
-
-<dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-</dependencies>
-```
-
-
-## jdk和springboot版本问题
-Caused by: org.springframework.core.NestedIOException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that isn't supported yet: file [C:\Users\kali\Desktop\java\day08-HTTP&Tomcat&Servlet\untitled3\target\classes\com\lgh\test\MainApplication.class]; nested exception is java.lang.IllegalArgumentException: Unsupported class file major version 62
-	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:57) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
 
 
 
-## 可以去掉部分依赖
-maven中支持
-之后我们就可以在springboot中简化了
 
 
 ## Rest风格
@@ -89,6 +60,18 @@ public IPage<Book>getPage(int currentPage,int pageSize){
     return page;
 }
 ```
+
+
+
+
+
+
+
+
+
+
+
+
 ## 手动注入
 ```java
 public TestController(BookService bookService){
@@ -156,30 +139,18 @@ yaml
 
 
 ## 整合数据库
-mysql + mybatis
-```yml
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/ssm_db
-    name: root
-    password: root
-```
-```java
-@Mapper
-public interface BookDao{
-  public Book getById(Integer id);
-}
-```
-
 
 ## juint 单元测试
-不用写main就可以运行
-@Test
 
+
+
+不用写main就可以运行
+
+```
+@Test
 @Before 在所有测试方法之前执行
 @After 在所有测试方法之后执行
-
+```
 
 Assert.assertEquals(40,result); //40 is your predict result is use your code to get
 

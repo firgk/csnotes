@@ -8,48 +8,6 @@ ME micro edition
 
 
 
-```java
-public class Example02 {
-    public static void main(String[] args) {
-        byte a;                // 定义byte类型的变量a
-        int b = 298;          // 定义int类型的变量b
-        a = (byte) b;
-        System.out.println("b=" + b);
-        System.out.println("a=" + a);
-    }
-}
-```
-
-
-变量b本身的值为298，然而在赋值给变量a后，a的值为42。出现这种现象的原因是，变量b为int类型，在内存中占用4个字节；byte类型的数据在内存中占用1个字节，当将变量b的类型强转为byte类型后，前面3个高位字节的数据丢失，数值发生改变。
-
-
-
-
-
-
-
-
-
-### 重载
-
-```java
-// 下面的方法实现了两个整数相加
-public static int add(int x, int y) {
-	return x + y;
-}
-// 下面的方法实现了三个整数相加
-public static int add(int x, int y, int z) {
-	return x + y + z;
-}
-// 下面的方法实现了两个小数相加
-public static double add(double x, double y) {
-	return x + y;
-}
-```
-
-
-
 ### 基础
 
 ```java
@@ -80,13 +38,10 @@ Objecct是所有类的超类
 
 
 
-
-
-
-
 用`.`来访问属性名或者方法名
 
-#### boolean
+
+> boolean
 
 ```java
 boolean flag = false;	 // 定义一个布尔型的变量flag，初始值为false
@@ -123,6 +78,9 @@ default private 不可以被子类访问
 
 
 ### 封装
+
+在面向对象编程中，封装是一种将数据（通常是属性）和操作数据的方法（通常是方法）捆绑在一起的概念
+
 ```java
 public class EncapTest{
    private String name;
@@ -151,7 +109,10 @@ public class EncapTest{
 
 
 
+
 ### 构造方法
+
+
 ```java
 class MyClass {
   int x;
@@ -162,7 +123,11 @@ class MyClass {
 }
 ```
 
+
 构造方法的重载
+
+它在对象被实例化（即创建）时自动调用。构造方法可以接受参数，这些参数可以用于在创建对象时传递初始化信息。
+
 
 ```java
 class MyClass {
@@ -182,6 +147,7 @@ class MyClass {
 }
 ```
 
+
 ### 构造代码块
 
 ```java
@@ -191,32 +157,16 @@ class MyClass {
 ```
 **构造块的执行顺序大于构造方法**
 
+
 ```java
 public class Example {
     private int x;
     private int y;
-
     {
         x = 1;
         System.out.println("执行构造代码块1，x=" + x);
     }
-
-    public Example() {
-        x = 2;
-        y = 3;
-        System.out.println("执行构造方法，x=" + x + ",y=" + y);
-    }
-
-    {
-        y = 4;
-        System.out.println("执行构造代码块2，y=" + y);
-    }
-
-    public static void main(String[] args) {
-        Example example = new Example();
-    }
 }
-
 ```
 
 
@@ -230,7 +180,7 @@ Java中的`static`关键字可以用来修饰变量、方法和代码块，它�
 1. 静态变量：所有对象共享同一份内存空间，不需要每个对象都创建一个副本。
 
 ```java
-javaCopy codepublic class MyClass {
+public codepublic class MyClass {
     public static int count = 0;
 
     public MyClass() {
@@ -241,10 +191,10 @@ javaCopy codepublic class MyClass {
 
 上述代码中，每创建一个`MyClass`对象，都会使`count`的值加1。由于`count`是静态变量，所有对象共享同一个值，因此可以统计所有`MyClass`对象的个数。
 
-1. 静态方法：不需要创建对象就可以直接使用类名调用，常用于工具类的编写。
+2. 静态方法：不需要创建对象就可以直接使用类名调用，常用于工具类的编写。
 
 ```java
-javaCopy codepublic class MathUtils {
+public codepublic class MathUtils {
     public static int add(int a, int b) {
         return a + b;
     }
@@ -253,10 +203,10 @@ javaCopy codepublic class MathUtils {
 
 上述代码中，`add`方法不需要创建`MathUtils`对象就可以直接使用，这样就可以方便地在其他类中调用该方法。
 
-1. 静态代码块：在类加载时就执行，通常用于初始化静态变量或执行某些静态操作。
+3. 静态代码块：在类加载时就执行，通常用于初始化静态变量或执行某些静态操作。
 
 ```java
-javaCopy codepublic class Config {
+public codepublic class Config {
     public static int timeout;
 
     static {
@@ -270,6 +220,10 @@ javaCopy codepublic class Config {
 
 
 ### 成员变量
+
+> 局部变量
+
+
 ```java
 class Example {
     // 成员变量
@@ -452,6 +406,7 @@ super：
 
 
 ### 抽象类
+
 ```java
 abstract class Animal { 
 	abstract void shout(); 
@@ -461,8 +416,8 @@ class Dog extends Animal {
 	System.out.println("汪汪...");
 	}
 }
-
 ```
+
 
 使用抽象类的场景
 
@@ -472,6 +427,7 @@ class Dog extends Animal {
 
 
 ### 接口
+
 有了抽象类为什么还有要有接口
 
 尽管抽象类可以提供一些抽象方法供子类实现，但是抽象类本身还是可以实现一些方法的，也就是说抽象类和子类之间还存在着一定程度上的耦合关系。相比之下，接口更加抽象、独立，可以看作是一组规范，用于指定某一类实现所需要满足的方法和属性，而不会实现任何方法。
@@ -486,12 +442,41 @@ class Dog extends Animal {
 
 
 ### 多态
+
 Java中多态主要有以下两种形式。
 
 1. 方法重载
 2. 方法重写
 3. 抽象类和抽象方法
 4. 接口
+
+
+
+
+1. 
+
+
+```java
+// 下面的方法实现了两个整数相加
+public static int add(int x, int y) {
+	return x + y;
+}
+// 下面的方法实现了三个整数相加
+public static int add(int x, int y, int z) {
+	return x + y + z;
+}
+// 下面的方法实现了两个小数相加
+public static double add(double x, double y) {
+	return x + y;
+}
+```
+
+
+
+
+
+
+3. 
 
 ```java
 abstract class Animal {  
@@ -508,15 +493,19 @@ class Cat extends Animal {
 
 
 
+
+
+
+
 ### 对象转型
+
 对象向上转型
 
 对象向上转型是指将子类对象赋值给父类引用变量的操作，这样做可以使子类对象具有父类对象的特征和行为，可以提高代码的灵活性和扩展性，是面向对象编程中常用的技术。
 
 例如，假设有一个 Animal 类和一个 Dog 类，Dog 类是 Animal 类的子类。如果我们将一个 Dog 类的对象赋值给一个 Animal 类的引用变量，就可以进行对象的向上转型：
 
-```
-javaCopy code
+```java
 Animal animal = new Dog();
 ```
 
@@ -528,8 +517,8 @@ Animal animal = new Dog();
 
 由于不同的动物有不同的喂食方式和清理笼子的方法，所以 AnimalManager 类中的 feed 和 cleanCage 方法需要根据传入的动物类型进行不同的操作。这时就可以使用对象向上转型来实现多态。具体实现可以如下：
 
-```
-javaCopy codepublic class AnimalManager {
+```java
+public class AnimalManager {
     public void feed(Animal animal) {
         // 根据不同的动物类型执行不同的喂食操作
         if (animal instanceof Dog) {
@@ -1049,6 +1038,189 @@ a.abs() 取最绝对值
 negate(): 取相反数
 ```
 
+网上有一个使用人数比较多的 `BigDecimal` 工具类，提供了多个静态方法来简化 `BigDecimal` 的操作。
+
+
+```java
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+/**
+ * 简化BigDecimal计算的小工具类
+ */
+public class BigDecimalUtil {
+
+    /**
+     * 默认除法运算精度
+     */
+    private static final int DEF_DIV_SCALE = 10;
+
+    private BigDecimalUtil() {
+    }
+
+    /**
+     * 提供精确的加法运算。
+     *
+     * @param v1 被加数
+     * @param v2 加数
+     * @return 两个参数的和
+     */
+    public static double add(double v1, double v2) {
+        BigDecimal b1 = BigDecimal.valueOf(v1);
+        BigDecimal b2 = BigDecimal.valueOf(v2);
+        return b1.add(b2).doubleValue();
+    }
+
+    /**
+     * 提供精确的减法运算。
+     *
+     * @param v1 被减数
+     * @param v2 减数
+     * @return 两个参数的差
+     */
+    public static double subtract(double v1, double v2) {
+        BigDecimal b1 = BigDecimal.valueOf(v1);
+        BigDecimal b2 = BigDecimal.valueOf(v2);
+        return b1.subtract(b2).doubleValue();
+    }
+
+    /**
+     * 提供精确的乘法运算。
+     *
+     * @param v1 被乘数
+     * @param v2 乘数
+     * @return 两个参数的积
+     */
+    public static double multiply(double v1, double v2) {
+        BigDecimal b1 = BigDecimal.valueOf(v1);
+        BigDecimal b2 = BigDecimal.valueOf(v2);
+        return b1.multiply(b2).doubleValue();
+    }
+
+    /**
+     * 提供（相对）精确的除法运算，当发生除不尽的情况时，精确到
+     * 小数点以后10位，以后的数字四舍五入。
+     *
+     * @param v1 被除数
+     * @param v2 除数
+     * @return 两个参数的商
+     */
+    public static double divide(double v1, double v2) {
+        return divide(v1, v2, DEF_DIV_SCALE);
+    }
+
+    /**
+     * 提供（相对）精确的除法运算。当发生除不尽的情况时，由scale参数指
+     * 定精度，以后的数字四舍五入。
+     *
+     * @param v1    被除数
+     * @param v2    除数
+     * @param scale 表示表示需要精确到小数点以后几位。
+     * @return 两个参数的商
+     */
+    public static double divide(double v1, double v2, int scale) {
+        if (scale < 0) {
+            throw new IllegalArgumentException(
+                    "The scale must be a positive integer or zero");
+        }
+        BigDecimal b1 = BigDecimal.valueOf(v1);
+        BigDecimal b2 = BigDecimal.valueOf(v2);
+        return b1.divide(b2, scale, RoundingMode.HALF_EVEN).doubleValue();
+    }
+
+    /**
+     * 提供精确的小数位四舍五入处理。
+     *
+     * @param v     需要四舍五入的数字
+     * @param scale 小数点后保留几位
+     * @return 四舍五入后的结果
+     */
+    public static double round(double v, int scale) {
+        if (scale < 0) {
+            throw new IllegalArgumentException(
+                    "The scale must be a positive integer or zero");
+        }
+        BigDecimal b = BigDecimal.valueOf(v);
+        BigDecimal one = new BigDecimal("1");
+        return b.divide(one, scale, RoundingMode.HALF_UP).doubleValue();
+    }
+
+    /**
+     * 提供精确的类型转换(Float)
+     *
+     * @param v 需要被转换的数字
+     * @return 返回转换结果
+     */
+    public static float convertToFloat(double v) {
+        BigDecimal b = new BigDecimal(v);
+        return b.floatValue();
+    }
+
+    /**
+     * 提供精确的类型转换(Int)不进行四舍五入
+     *
+     * @param v 需要被转换的数字
+     * @return 返回转换结果
+     */
+    public static int convertsToInt(double v) {
+        BigDecimal b = new BigDecimal(v);
+        return b.intValue();
+    }
+
+    /**
+     * 提供精确的类型转换(Long)
+     *
+     * @param v 需要被转换的数字
+     * @return 返回转换结果
+     */
+    public static long convertsToLong(double v) {
+        BigDecimal b = new BigDecimal(v);
+        return b.longValue();
+    }
+
+    /**
+     * 返回两个数中大的一个值
+     *
+     * @param v1 需要被对比的第一个数
+     * @param v2 需要被对比的第二个数
+     * @return 返回两个数中大的一个值
+     */
+    public static double returnMax(double v1, double v2) {
+        BigDecimal b1 = new BigDecimal(v1);
+        BigDecimal b2 = new BigDecimal(v2);
+        return b1.max(b2).doubleValue();
+    }
+
+    /**
+     * 返回两个数中小的一个值
+     *
+     * @param v1 需要被对比的第一个数
+     * @param v2 需要被对比的第二个数
+     * @return 返回两个数中小的一个值
+     */
+    public static double returnMin(double v1, double v2) {
+        BigDecimal b1 = new BigDecimal(v1);
+        BigDecimal b2 = new BigDecimal(v2);
+        return b1.min(b2).doubleValue();
+    }
+
+    /**
+     * 精确对比两个数字
+     *
+     * @param v1 需要被对比的第一个数
+     * @param v2 需要被对比的第二个数
+     * @return 如果两个数一样则返回0，如果第一个数比第二个数大则返回1，反之返回-1
+     */
+    public static int compareTo(double v1, double v2) {
+        BigDecimal b1 = BigDecimal.valueOf(v1);
+        BigDecimal b2 = BigDecimal.valueOf(v2);
+        return b1.compareTo(b2);
+    }
+
+}
+```
+
+
 
 
 ## 日期与时间
@@ -1167,13 +1339,33 @@ Matcher 依据 pattern 对象进行匹配
 
 
 ## 集合 
+
+
+
+
+
+
+> 为何引入集合
+
+数组的缺点: 
+（1）数组一旦指定了长度，那么长度就被确定了，不可以更改。
+（2）删除，增加元素  效率低。
+（3）数组中实际元素的数量是没有办法获取的，没有提供对应的方法或者属性来获取
+（4）数组存储：有序，可重复 ，对于无序的，不可重复的数组不能满足要求。
+正因为上面的缺点，引入了一个新的存储数据的结构---》集合
+
 长度可变，可以存储不同数据类型的动态数组
-![集合](/java课件/课件提取/图片1.png)
+
+
+![](./src/bf2dab9a-532c-c832-8b7a-4b6a2a67feb7.png)
 
 
 
 ALL
+
 > Collection
+
+
 集合中最基本的接口，用于存储一组无序、不唯一的对象，一般不直接使用该接口
 **List**
 Collection的子接口，用于存储一组**无序、不唯一**的对象，是集合中常用的接口之一
@@ -1448,6 +1640,13 @@ Object pollLast() 移除并返回集合的最后一个元素
 
 
 ## Map（一对）
+
+
+![](./src/ac4456d4-2db6-3f70-dd2d-3437a9b45d9d.png)
+
+
+
+
 它的每个元素都包含一个键对象**Key和值对象Value**，键和值对象之间存在一种对应关系，称为映射
 Map中键对象Key不允许重复，访问Map集合中的元素时，只要指定了Key，就能找到对应的Value。
 

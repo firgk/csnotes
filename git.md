@@ -1,30 +1,24 @@
 
 # git
 
-## 本地git操作
+## 基本
+
+
 ```
+git pull
+git push
 git config -- global user.name ""
-git config -- global user.email
+git config -- global user.email 
 git init
 git status
 git add 文件名
 git add 文件1 文件2
 git add .
-git rm --cashed 文件名
 git commit -m "备注"
 ```
 
-## 版本回退操作
-
-```git log
-git reset --hard 提交编号
-```
 
 
-### 回退之后，再回到之间的版本的时候
-```git reflog
-git reset ---hard 提交编号
-```
 
 ## 网络操作
 
@@ -32,41 +26,33 @@ git reset ---hard 提交编号
 git push
 git pull
 
-获得github授权
-.ssh/config
-更改url=https://用户名:密码@github.com/用户名/仓库名.git ??? bug
 ```
 
 
 ## 流程
+
+### 基于http协议
+
 ```
-github创建仓库
-git clone
-.git/config
-完成
+git init
+git remote remove origin
+git remote add origin http://......
+git add .
+git commit -m "upload"
+git push
 ```
 
 
-# 基于ssh协议
+### 基于ssh协议
+
 ```
-ssh-keygen -t rsa -c 注册邮箱
+ssh-keygen -t rsa 
 （需要安装openssh）
-找到文件,打开
 公钥 全部内容
 粘贴到github的一个特定位置中
 完成
-以后克隆的时候使用ssh克隆
-```
+后续操作免密
 
-## 分支操作
-```
-git branch查看分支
-git branch 分支名称 创建分支
-git checkout 分支名称 切换分支
-
-(master中) git merge 分支名称 合并分支
-git branch -d 分支名称 删除名称
-修改提交后继续
 ```
 
 
@@ -83,8 +69,38 @@ mdir/
 
 
 
-## 高级操作
+# 高级操作
 
+## 分支操作
+```
+git branch查看分支
+git branch 分支名称 创建分支
+git checkout 分支名称 切换分支
+
+(master中) git merge 分支名称 合并分支
+git branch -d 分支名称 删除名称
+修改提交后继续
+```
+
+
+
+## 版本回退操作
+
+```
+git log
+git reset --hard 提交编号
+```
+
+
+### 回退之后，再回到之间的版本的时候
+```
+git reflog
+git reset ---hard 提交编号
+```
+
+
+
+git rm --cashed 文件名
 
 ```
 git push --set-upstream origin master
@@ -109,7 +125,6 @@ git push -u origin
 
 git push -u origin
 
-ChatGPT
 这个命令的作用是将当前分支的本地更改推送到远程仓库，并且将当前分支与远程仓库的同名分支进行关联。具体来说：
 
 git push: 将本地提交推送到远程仓库。
@@ -149,6 +164,28 @@ git branch -M main
 
 
 ```
+
+
+
+
+
+
+
+注意： 
+
+## 如果提交了，但是提交之前没拉取，并且有修改
+
+
+仍然可以git pull
+内容不会覆盖，git会自动帮我们合并
+
+
+
+
+
+
+
+
 
 
 

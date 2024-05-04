@@ -1,31 +1,21 @@
 
-# linux
-
-
-
-
-
-
-
-
-
 
 ## 获得linux
 
-	1. 获得linux
-	虚拟机安装linux
-	购买云服务器安装linux,并且得到相应的连接方式
-	wsllinux(功能不全)
-	实体机安装linux(浪费性能)
-	2. 连接linux
-	ssh连接linux
-	图形化连接linux
-		给linux安装图形化界面
-		用对应的图形化软件进行连接
-	虚拟机中直接操作linux(有些卡顿,但是命令行绰绰有余)
-	3.传输文件
-	某些ssh支持拖拽传输文件
-	命令传输
+1. 获得linux
+虚拟机安装linux
+购买云服务器安装linux,并且得到相应的连接方式
+wsllinux(功能不全)
+实体机安装linux(浪费性能)
+2. 连接linux
+ssh连接linux
+图形化连接linux
+	给linux安装图形化界面
+	用对应的图形化软件进行连接
+虚拟机中直接操作linux(有些卡顿,但是命令行绰绰有余)
+3. 传输文件
+某些ssh支持拖拽传输文件
+命令传输
 
 
 
@@ -598,7 +588,11 @@ scp username@remote_host:/remote/directory/file.txt ./
 
 	如果你再`.bashrc`中配置了启动时输出文字的脚本,可能会导致传输不显示进度,输出不该输出的字符等等.
 
-#### rz、sz命令
+
+#### rz、sz命令 
+
+> receive send  Zmodem(文件传输协议)
+
 rz、sz命令需要安装，可以通过：`yum -y install lrzsz` 安装
 
 	注意，rz、sz命令需要终端软件支持才可正常运行
@@ -608,21 +602,21 @@ rz、sz命令需要安装，可以通过：`yum -y install lrzsz` 安装
 
 ### 压缩解压
 
-![](http://leaweihou.site:1003/photobed/2024_03_08_21_30_34.png)
+![](http://114.116.43.154/photobed/2024_03_08_21_30_34.png)
 
 
 	•.tar，称之为tarball，归档文件，即简单的将文件组装到一个.tar的文件内，并没有太多文件体积的减少，仅仅是简单的封装
 	•.gz，也常见为.tar.gz，gzip格式压缩文件，即使用gzip压缩算法将文件压缩到一个文件内，可以极大的减少压缩后的体积
 
-#### tar命令
+#### tar
 
 上述两种格式 均可用语法
 
 `tar [-c -v -x -f -z -C] 参数1 参数2 ... 参数n`
 
-	-c，创建压缩文件，用于压缩模式
+	-c，创建压缩文件，用于压缩模式 compress
 	-v，显示压缩、解压过程，用于查看进度
-	-x，解压模式
+	-x，解压模式 extract
 	-f，要创建的文件，或要解压的文件，-f选项必须在所有选项中位置处于最后一个
 	-z，gzip模式，不使用-z就是普通的tarball格式
 	-C，选择解压的目的地，用于解压模式
@@ -674,7 +668,6 @@ zip -r test.zip test itheima a.txt
 - unzip test.zip，将test.zip解压到当前目录
 - unzip [-d] 参数   参数未解压要去的位置
 - unzip test.zip -d /home/itheima，将test.zip解压到指定文件夹内（/home/itheima）
-
 ```
 
 
@@ -813,7 +806,6 @@ gg跳转第一行
 u撤销
 
 
-https://github.com/overmind1980/oeasy-python-tutorial.git
 
 :99,017s/8/心/g
 
@@ -1092,8 +1084,12 @@ make&&make install
 
 
 
+## 删除软件
 
-
+```
+apt list --installed |grep steam # 用来查看完整的包名
+sudo dpkg -r steam-launcher
+```
 
 
 
@@ -1102,14 +1098,13 @@ make&&make install
 ## 其他linux
 
 
+apline linux
+卸载软件 apk del gcc
 
-	apline linux
-	卸载软件 apk del gcc
 
-
-	kali linux
-	apt-get remove
-	删除包
+kali linux
+apt-get remove
+删除包
 
 
 

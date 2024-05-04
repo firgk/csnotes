@@ -1,29 +1,3 @@
-## 常用配置模板
-
-~~~yaml
-spring:
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource  #底层使用druid连接池
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/msbsys?serverTimezone=Asia/Shanghai&useSSL=false&characterEncoding=utf8
-    username: root
-    password: root
-    druid:
-      # 连接池的配置信息
-      initial-size: 5  # 初始化连接数大小
-      max-active: 30  # 最大连接数
-      min-idle: 5   # 最小连接数
-      # 配置获取连接等待超时的时间
-      max-wait: 60000  #如果连接都被占用，最大等待时间1min=60000ms
-
-
-
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-~~~
-
-
-
 
 
 
@@ -100,6 +74,14 @@ mybatis:
 
 
 [已经创建好的springboot+web](./assets/template_springboot.zip)
+
+### 从网页创建
+
+start.spring.io
+快速生成springboot项目
+start.aliyun.com
+国内
+
 
 
 
@@ -3396,6 +3378,25 @@ class SpringBootM10ApplicationTests {
 
 ```
 
+## Errors
+
+
+
+
+
+
+### jdk和springboot版本问题
+
+Caused by: org.springframework.core.NestedIOException: ASM ClassReader failed to parse class file - probably due to a new Java class file version that isn't supported yet: file [C:\Users\kali\Desktop\java\day08-HTTP&Tomcat&Servlet\untitled3\target\classes\com\lgh\test\MainApplication.class]; nested exception is java.lang.IllegalArgumentException: Unsupported class file major version 62
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:57) ~[spring-core-5.1.7.RELEASE.jar:5.1.7.RELEASE]
+
+
+
+### jdk和springboot版本问题
+
+引起java.lang.ExceptionInInitializerError 错误的原因是：在类的初始化时，出错。也就是说，在加载类时，执行static的属性、方法块时，出错了。
+
+或者是引入的某个东西的版本不对，因为springboot引入的部分以来会自己配置，比如你的jdk版本过高
 
 
 
