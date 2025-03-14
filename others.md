@@ -1,6 +1,71 @@
 
 # 软件
 
+
+## intel idea调试
+
+绿色左上下: 一步一步的向下运行代码，不会走入任何方法中。
+绿色下: 一步一步的向下运行代码，不会走入系统类库的方法中，但是会走入自定义的方法中。
+红色下: 一步一步的向下运行代码，会走入系统类库的方法中，也会走入自定义的方法中。
+绿色上: 跳出方法
+
+
+在断点处`右击`调出条件断点。可以在满足某个条件下，实施断点。
+
+	比如设置for循环i等于67的时候
+
+
+
+
+
+## termux
+
+```sh
+pkg install openssh
+sshd
+passwd
+whoami
+
+pkg install vim
+termux-setup-storage
+
+vim ~/.bashrc
+
+
+
+/storage
+~/storage 是两个不同的文件夹
+
+~ $ ls
+storage
+~ $ cd storage/
+~/storage $ pwd
+/data/data/com.termux/files/home/storage
+
+
+
+
+
+/storage/emulated/0/nas_redmi
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## nas面板
 windows
 
@@ -61,14 +126,6 @@ sun-panel_v1.3.0_windows_amd64.zip
     Scrcpy
 
 
-## intelj
-
-smartinput 优化输入法
-
-
-
-
-# 硬件
 
 
 ## 罗技m590鼠标 两个都是蓝牙,接收器失效
@@ -80,6 +137,25 @@ smartinput 优化输入法
 
 
 
+## windows终端使用clash的代理
+
+
+启动脚本
+set http_proxy=http://127.0.0.1:7890
+set https_proxy=socks://127.0.0.1:7890
+curl google.com
+@echo off
+echo !!!!!!!!!!!!!!!!!!!!!!!!! proxy start success !!!!!!!!!!!!!!!!!!!!!!!!! 
+echo !!!!!!!!!!!!!!!!!!!!!!!!! proxy start success !!!!!!!!!!!!!!!!!!!!!!!!! 
+echo !!!!!!!!!!!!!!!!!!!!!!!!! proxy start success !!!!!!!!!!!!!!!!!!!!!!!!! 
+
+禁用脚本
+set http_proxy=
+set https_proxy=
+@echo off
+echo !!!!!!!!!!!!!!!!!!!!!!!!! proxy off success !!!!!!!!!!!!!!!!!!!!!!!!! 
+echo !!!!!!!!!!!!!!!!!!!!!!!!! proxy off success !!!!!!!!!!!!!!!!!!!!!!!!! 
+echo !!!!!!!!!!!!!!!!!!!!!!!!! proxy off success !!!!!!!!!!!!!!!!!!!!!!!!! 
 
 
 
@@ -89,6 +165,16 @@ smartinput 优化输入法
 
 
 
+
+
+
+
+
+
+
+
+
+# 硬件
 
 
 

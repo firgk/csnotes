@@ -1,5 +1,0 @@
-
-
-
-@RestController注解相当于@ResponseBody和@Controller合在一起的作用。在使用@RestController注解Controller时，Controller中的方法无法返回jsp页面，或者html，配置的视图解析器 InternalResourceViewResolver不起作用，返回的内容就是Return 里的内容。 包括在Mapping注解使用的同时使用@ResponseBody时也会出现同样的问题。
-解决办法①：去除@ResponseBody或将含有Rest的注解换成对应的原始注解@Controller；
