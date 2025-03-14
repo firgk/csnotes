@@ -1,0 +1,436 @@
+{
+    "root": {
+        "data": {
+            "id": "d8fpihhe3eo0",
+            "created": 1741926793179,
+            "text": "MainTopic",
+            "expandState": "expand"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d8fpk4dyny00",
+                    "created": 1741926921402,
+                    "text": "前端",
+                    "layout_right_offset": {
+                        "x": -142.99999720323837,
+                        "y": 116.99999771174055
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8fpk819iq00",
+                            "created": 1741926929341,
+                            "text": "基础开发",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d8fpkkwjdhc0",
+                                    "created": 1741926957354,
+                                    "text": "html"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8fpkmng8w00",
+                                    "created": 1741926961158,
+                                    "text": "js"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8fpoo6h0wo0",
+                                    "created": 1741927277941,
+                                    "text": "css"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpkpac84g0",
+                            "created": 1741926966895,
+                            "text": "高级",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d8fpkrw1ikw0",
+                                    "created": 1741926972561,
+                                    "text": "vue 简单使用，不使用工程化开发"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8fpl5t0rwg0",
+                                    "created": 1741927002853,
+                                    "text": "ui框架"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d8fpl9rfspc0",
+                                            "created": 1741927011465,
+                                            "text": "ArcoDesign"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d8fpsn1rkdc0",
+                                    "created": 1741927588937,
+                                    "text": "npm"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpsp3q2og0",
+                            "created": 1741927593409,
+                            "text": "nginx",
+                            "layout_right_offset": {
+                                "x": -6.999999863095525,
+                                "y": 13.999999726191163
+                            }
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d8fplufbmp40",
+                    "created": 1741927056445,
+                    "text": "后端",
+                    "layout_right_offset": {
+                        "x": 488.99999043624865,
+                        "y": 18.999999628402293
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8fplz1rg940",
+                            "created": 1741927066509,
+                            "text": "linux"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpm1v4gpk0",
+                            "created": 1741927072638,
+                            "text": "docker"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpmxz6mso0",
+                            "created": 1741927142540,
+                            "text": "redis"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d8fpm7s9dsw0",
+                    "created": 1741927085525,
+                    "text": "java",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8fprczdco80",
+                            "created": 1741927488660,
+                            "text": "spring"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fprdy91fk0",
+                            "created": 1741927490769,
+                            "text": "springboot"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fprgvmk740",
+                            "created": 1741927497140,
+                            "text": "springmvc"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpn6ndt5c0",
+                            "created": 1741927161418,
+                            "text": "interview"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpoc2i4xk0",
+                            "created": 1741927251580,
+                            "text": "thymeleaf"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpoftsdsw0",
+                            "created": 1741927259760,
+                            "text": "微服务"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpok4iyxs0",
+                            "created": 1741927269117,
+                            "text": "设计模式"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpuf5wna00",
+                            "created": 1741927728501,
+                            "text": "mybatisplus"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpqtot1sg0",
+                            "created": 1741927446662,
+                            "text": "andorid",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d8fpqvi96bc0",
+                                    "created": 1741927450620,
+                                    "text": "adb"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d8fpqxt9zx40",
+                                    "created": 1741927455640,
+                                    "text": "android"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d8fpnb695y80",
+                    "created": 1741927171266,
+                    "text": "其他",
+                    "layout_right_offset": {
+                        "x": 479.9999906122688,
+                        "y": -52.99999896343792
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8fpnbwhbfs0",
+                            "created": 1741927172852,
+                            "text": "业务"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpndd46tc0",
+                            "created": 1741927176034,
+                            "text": "代码片段"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpniy9a4w0",
+                            "created": 1741927188196,
+                            "text": "hacker"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpno628mo0",
+                            "created": 1741927199552,
+                            "text": "small"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpnscc3xc0",
+                            "created": 1741927208639,
+                            "text": "分布式设计"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d8fpik6ed7s0",
+                    "created": 1741926799045,
+                    "text": "python",
+                    "expandState": "expand",
+                    "layout": null,
+                    "layout_right_offset": {
+                        "x": 55.99999890476465,
+                        "y": -177.99999651871653
+                    }
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8fpmqe483c0",
+                            "created": 1741927126029,
+                            "text": "flask"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpjzx5l400",
+                            "created": 1741926911678,
+                            "text": "pymysql",
+                            "expandState": "expand"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d8fptomjrtk0",
+                    "created": 1741927670734,
+                    "text": "cs",
+                    "layout_right_offset": {
+                        "x": -10.999999784864542,
+                        "y": -145.999997144565
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8fptqrvj480",
+                            "created": 1741927675410,
+                            "text": "bat"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fptrrjbg80",
+                            "created": 1741927677566,
+                            "text": "re"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpttli0lc0",
+                            "created": 1741927681555,
+                            "text": "redis"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d8fpu7essww0",
+                    "created": 1741927711624,
+                    "text": "sql",
+                    "layout_right_offset": {
+                        "x": 4.99999990221113,
+                        "y": -32.99999935459334
+                    },
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8fpv7m3kq80",
+                            "created": 1741927790430,
+                            "text": "mysql"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpu8gi15s0",
+                            "created": 1741927713904,
+                            "text": "highgo"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d8fpuy74h080",
+                    "created": 1741927769933,
+                    "text": "software",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d8fpv27q5540",
+                            "created": 1741927778677,
+                            "text": "git"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d8fpv3c28rk0",
+                            "created": 1741927781116,
+                            "text": "sourcetree"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
