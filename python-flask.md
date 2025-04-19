@@ -1,6 +1,11 @@
 
 
 
+
+
+
+
+
 ```python
 
 debug 模式
@@ -380,3 +385,292 @@ console.log(error);
 
 
 ```
+
+
+
+
+flask 多线程操作
+
+```python
+if name == 'main':
+	sing_thread = threading.Thread (target=sing, args=("我要唱歌 哈哈哈",))
+	dance_thread = threading.Thread (target=dance, kwargs={"msg": "我在跳舞哦 啦啦啦"})
+	sing_thread.start()
+	dance_thread.start()
+```
+
+
+
+## flask--URL反转
+
+从视图函数到url的转换
+
+在页面做重定向的时候会使用url反转。
+
+在模板中，也会使用url反转
+```python
+#encoding:utf-8
+from flask import Flask,url_for
+ 
+app = Flask(__name__)
+ 
+ 
+@app.route('/')
+def index():
+    print url_for('my_list')
+    print url_for('article',id='abc')
+    return 'Hello World!'
+@app.route('/list/')
+def my_list():
+    return 'list'
+@app.route('/article/<id>/')
+def article(id):
+    return u'您请求的参数是：%s'%id
+ 
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+
+打散字典
+
+```python
+@app.route('/')
+def index():
+    context = {
+        'username': u'知了课堂',
+        'gender': u'男',
+        'age': 18
+    }
+    return render_template('index.html',**context)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+
+if
+
+```html
+<body>
+    {% if user %}
+    <a href="#">{{ user.username }}</a>
+    <a href="#">注销</a>
+    {% else %}
+    <a href="#">登录</a>
+    <a href="#">注册</a>
+    {% endif %}
+</body>
+```
+
+
+
+```html
+{# {% for k,v in user.items() %}#}
+{#     <p>{{ k }}: {{ v }}</p>#}
+{# {% endfor %}#}
+{##}
+{# {% for website in websites %}#}
+{#     <p>{{ website }}</p>#}
+{# {% endfor %}#}
+```
+
+
+
+
+
+
+
+
+**Flask-Script** 是一个扩展库，它允许通过命令行操作 Flask 应用程序。它提供了运行开发服务器、自定义 Python shell、设置数据库脚本、定时任务等功能，使得脚本和系统分开。
+
+```python
+from flask_script import Manager
+from shop import app_config
+
+app = app_config('develop')
+manage = Manager(app)
+
+@manage.command
+def hello():
+	print('命令执行成功')
+
+if __name__ == '__main__':
+	manage.run()
+```
+
+
+```python
+@manage.option('-u', '--username', dest='uname')
+@manage.option('-p', '--password', dest='pwd')
+def create_user(uname, pwd):
+	user = User(uname=uname, pwd=pwd)
+	db.session.add(user)
+	db.session.commit()
+	print('添加用户成功！')
+if __name__ == '__main__':
+	manage.run()
+```
+
+
+```
+在命令行中运行以下命令：
+python hello.py hello
+python hello.py create_user -u 用户名 -p 密码
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

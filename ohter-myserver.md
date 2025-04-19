@@ -6,6 +6,7 @@
 服务名	镜像	端口
 nginx	nginx	80
 alist	alist	5244
+memos	memos	5230
 ```
 
 
@@ -13,6 +14,10 @@ halo服务器的一些源docker compose 文件
 
 
 
+
+## memos
+
+docker run -d --name memos -p 5230:5230 -v /root/memos/:/var/opt/memos neosmemo/memos:latest
 
 ## mysql
 
